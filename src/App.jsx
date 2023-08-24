@@ -32,6 +32,7 @@ function App() {
       <div>
         <SideBar />
         <RecommendVideo />
+        
       </div>
     </div>
   );
