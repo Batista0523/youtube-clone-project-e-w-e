@@ -24,7 +24,7 @@ function App() {
     setVideos(data.items)
   })
   .catch(error => {
-    console.error('Error fetching data:',  error);
+    console.error('Error fetching data:', error);
   })
 }, []);
 
