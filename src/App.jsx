@@ -22,17 +22,6 @@ import "./App.css";
 
 
 
-function App() {
-  return (
-    <div className="app">
-      <NavBar />
-      <div className="app_page">
-        <SideBar />
-        <RecommendVideo />
-      </div>
-    </div>
-  );
-}
 
 
 function App() {
