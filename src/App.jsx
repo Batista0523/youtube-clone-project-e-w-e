@@ -45,13 +45,7 @@ function App() {
       });
   }, []);
 
-  return (
-    <div>
-      <NavBar etag={videos.etag} />
-      <SideBar />
-      <RecommendVideo />
-    </div>
-  );
+  
 }
 
 export default App;
