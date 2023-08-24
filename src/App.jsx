@@ -22,8 +22,6 @@ import "./App.css";
 
 
 
-
-
 function App() {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
@@ -46,6 +44,7 @@ function App() {
   }, []);
 
 
+
 return (
   <div className="app">
     <NavBar snippet={videos.kind``}/>
@@ -58,6 +57,7 @@ return (
 
 
   
+
 
 }
 
