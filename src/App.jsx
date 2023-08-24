@@ -45,7 +45,7 @@ function App() {
 
 return (
   <div className="app">
-    <NavBar />
+    <NavBar snippet={videos.snippet}/>
     <div className="app_page">
       <SideBar />
       <RecommendVideo />
