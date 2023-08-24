@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
-import React from "react";
 
 import "./App.css";
 
@@ -10,8 +9,10 @@ function App() {
   return (
     <div className="app">
       <NavBar />
-      <SideBar />
-      <RecommendVideo />
+      <div className="app_page">
+        <SideBar />
+        <RecommendVideo />
+      </div>
     </div>
   );
 }
