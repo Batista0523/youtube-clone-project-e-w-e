@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 
 
 
@@ -48,7 +48,7 @@ function App() {
 
 return (
   <div className="app">
-    <NavBar snippet={videos.snippet}/>
+    <NavBar snippet={videos.kind``}/>
     <div className="app_page">
       <SideBar />
       <RecommendVideo />
