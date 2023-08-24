@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Nav from './components/NavBar'
+import NavBar from './components/NavBar'
 import SideBar from './components/SideBar'
 import RecommendVideo from './components/RecommendVideo'
 
@@ -10,7 +10,9 @@ function App() {
 
   return (
     <>
-    <Nav/>
+    <NavBar/>
+    <SideBar/>
+    <RecommendVideo/>
     </>
   )
 }
