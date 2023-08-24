@@ -1,12 +1,12 @@
 import React from 'react';
 import './Nav.css'
 
-const Nav = () => {
+const NavBar = () => {
     return (
-        <div className='header'>
+        <div>
             
         </div>
     );
 }
 
-export default Nav;
+export default NavBar;
