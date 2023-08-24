@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <NavBar etag={videos.etag}/>
+      <NavBar />
       <div className="app_page">
         <SideBar />
         <RecommendVideo />
