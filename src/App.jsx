@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 
 
 
@@ -20,19 +20,6 @@ import "./App.css";
 
 
 
-
-
-function App() {
-  return (
-    <div className="app">
-      <NavBar etag={videos.etag}/>
-      <div className="app_page">
-        <SideBar />
-        <RecommendVideo />
-      </div>
-    </div>
-  );
-}
 
 
 function App() {
@@ -60,7 +47,7 @@ function App() {
 
 return (
   <div className="app">
-    <NavBar />
+    <NavBar snippet={videos.kind``}/>
     <div className="app_page">
       <SideBar />
       <RecommendVideo />
