@@ -1,7 +1,10 @@
-import { useState } from 'react'
-import Nav from '../components/Header'
-import.meta.env
-const URL = import.meta.env.VITE_BASE_API_URL;
+
+import React, { useState } from 'react'
+import NavBar from './components/NavBar'
+import SideBar from './components/SideBar'
+import RecommendVideo from './components/RecommendVideo'
+import React from 'react'
+
 import './App.css'
 
 
@@ -18,10 +21,15 @@ function App() {
   })
 
   return (
-    <div>
-     <Nav />
-       
-    </div>
+
+
+    <>
+    <NavBar/>
+    <SideBar/>
+    <RecommendVideo/>
+    
+    </>
+
 
   )
 }
