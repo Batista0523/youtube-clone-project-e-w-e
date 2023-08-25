@@ -33,7 +33,6 @@ function App() {
     const params = new URLSearchParams({
       key: API_KEY,
       part: "snippet",
-      q: "coding",
       type: "video",
     });
 
@@ -56,7 +55,17 @@ function App() {
         
 
 
+
+
+return (
+  <div className="app">
+    <NavBar />
+    <div className="app_page">
+      <SideBar />
+      <RecommendVideo videos={videos} setVideos={setVideos}/>
+
       </div>
+
     </div>
   );
 
