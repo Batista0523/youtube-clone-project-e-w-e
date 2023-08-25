@@ -48,7 +48,7 @@ function App() {
 
 return (
   <div className="app">
-    <NavBar />
+    <NavBar setVideos={setVideos}/>
     <div className="app_page">
       <SideBar />
       {videos.map((video) => (

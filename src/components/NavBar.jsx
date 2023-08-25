@@ -1,10 +1,13 @@
-import React from 'react';
-import './Nav.css'
 
-const NavBar = ({video}) => {
+
+import React from 'react';
+import './Nav.css';
+import '@fontsource/roboto/400.css';
+
+const NavBar = () => {
     return (
         <div>
-            <h1>{video}</h1>
+           <i className="material-icons">menu</i>
         </div>
     );
 }
