@@ -29,10 +29,9 @@ function App() {
       });
   }, []);
 
-
   return (
     <div className="app">
-      <NavBar setVideos={setVideos}/>
+      <NavBar setVideos={setVideos} />
       <div className="app_page">
         <SideBar />{" "}
         <div>
@@ -42,7 +41,6 @@ function App() {
           ))}
         </div>
       </div>
-
     </div>
   );
 }
