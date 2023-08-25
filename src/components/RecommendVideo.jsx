@@ -4,7 +4,9 @@ const RecommendVideo = ({videos, setVideos}) => {
     return (
         <div>
             <ul>{videos.map((video)=> {
-                return <li>{video.snippet.channelId}</li>
+                return <div>
+                     <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
+                    </div>
             })}</ul>
             
         </div>
