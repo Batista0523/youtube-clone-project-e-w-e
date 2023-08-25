@@ -1,22 +1,16 @@
-
-
 import React, { useState, useEffect } from "react";
-
-import.meta.env;
 
 const API_KEY = import.meta.env.VITE_BASE_API_URL;
 const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
-import "./App.css";
 
+import "./App.css";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
 
-
-import "./App.css";
-
 function App() {
   const [videos, setVideos] = useState([]);
+
   useEffect(() => {
     const params = new URLSearchParams({
       key: API_KEY,
@@ -35,18 +29,15 @@ function App() {
       });
   }, []);
 
-
-
-
-return (
-  <div className="app">
-    <NavBar />
-    <div className="app_page">
-      <SideBar />
-      {videos.map((video) => (
+  return (
+    <div className="app">
+      <NavBar />
+      <div className="app_page">
+        <SideBar />
+        {videos.map((video) => (
           <RecommendVideo key={video.id.videoId} video={video} />
         ))}
-
+      </div>
     </div>
   );
 }
