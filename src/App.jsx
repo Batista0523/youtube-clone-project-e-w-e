@@ -1,4 +1,7 @@
 
+import React, { useState,useEffect } from "react";
+
+
 
 
 
@@ -9,10 +12,12 @@ const API_KEY = import.meta.env.VITE_BASE_API_URL;
 const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
 import "./App.css";
 
-import { useState, useEffect } from 'react'
+
+
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
+
 
 import "./App.css";
 
@@ -42,21 +47,20 @@ function App() {
         console.error("Error fetching data:", error);
       });
   }, []);
+  return (
+    <div>
+      <NavBar etag={videos.etag} />
+      <div>
+        <SideBar />
+        <RecommendVideo />
+        
 
 
-
-return (
-  <div className="app">
-    <NavBar snippet={videos.kind``}/>
-    <div className="app_page">
-      <SideBar />
-      <RecommendVideo />
+      </div>
     </div>
-  </div>
-);
+  );
 
 
-  
 
 
 }
