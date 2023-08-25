@@ -1,10 +1,10 @@
 import React from 'react';
 import './Nav.css'
 
-const NavBar = () => {
+const NavBar = ({video}) => {
     return (
         <div>
-            <h1>youtube</h1>
+            <h1>{video}</h1>
         </div>
     );
 }

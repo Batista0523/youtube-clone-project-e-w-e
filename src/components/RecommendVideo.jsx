@@ -1,9 +1,13 @@
 import React from 'react';
 
-const RecommendVideo = () => {
+const RecommendVideo = ({videos, setVideos}) => {
     return (
         <div>
-            <h1>videos goes here</h1>
+            <ul>{videos.map((video)=> {
+                return <div>
+                     <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
+                    </div>
+            })}</ul>
             
         </div>
     );
