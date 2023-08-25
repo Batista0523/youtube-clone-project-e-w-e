@@ -33,10 +33,13 @@ function App() {
     <div className="app">
       <NavBar />
       <div className="app_page">
-        <SideBar />
-        {videos.map((video) => (
-          <RecommendVideo key={video.id.videoId} video={video} />
-        ))}
+        <SideBar />{" "}
+        <div>
+          <h1 className="video_header">Recommend Video</h1>
+          {videos.map((video) => (
+            <RecommendVideo key={video.id.videoId} video={video} />
+          ))}
+        </div>
       </div>
     </div>
   );
