@@ -1,4 +1,5 @@
 import React from "react";
+import "./Recommend.css";
 
 const RecommendVideo = ({ video }) => {
   return (
