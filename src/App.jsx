@@ -35,13 +35,18 @@ function App() {
       });
   }, []);
 
-  return (
-    <div className="app">
-      <NavBar />
-      <div className="app_page">
-        <SideBar />
-        <RecommendVideo videos={videos} setVideos={setVideos} />
-      </div>
+
+
+
+return (
+  <div className="app">
+    <NavBar />
+    <div className="app_page">
+      <SideBar />
+      {videos.map((video) => (
+          <RecommendVideo key={video.id.videoId} video={video} />
+        ))}
+
     </div>
   );
 }
