@@ -1,11 +1,10 @@
 import React from 'react';
 import './Nav.css'
 
-const NavBar = ({snippet}) => {
-    console.log(snippet)
+const NavBar = ({video}) => {
     return (
         <div>
-            <h1>{snippet}</h1>
+            <h1>{video}</h1>
         </div>
     );
 }
