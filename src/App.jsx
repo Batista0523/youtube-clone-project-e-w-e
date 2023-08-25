@@ -51,7 +51,9 @@ return (
     <NavBar />
     <div className="app_page">
       <SideBar />
-      <RecommendVideo videos={videos} setVideos={setVideos}/>
+      {videos.map((video) => (
+          <RecommendVideo key={video.id.videoId} video={video} />
+        ))}
     </div>
   </div>
 );
