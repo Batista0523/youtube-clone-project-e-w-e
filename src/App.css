@@ -1,7 +1,7 @@
-.app_page {
+/* .app_page{
   display: flex;
-
-}
+  flex: auto;
+} */
 
 .video_header  {
   flex: 0.8;
