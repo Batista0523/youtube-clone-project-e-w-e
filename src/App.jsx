@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-
-const API_KEY = import.meta.env.VITE_BASE_API_URL;
-const BASE_URL = "https://youtube.googleapis.com/youtube/v3";
+import { getBaseUrl } from "./api/fetch";
+import { getApiKey } from "./api/API";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -13,12 +12,12 @@ function App() {
 
   useEffect(() => {
     const params = new URLSearchParams({
-      key: API_KEY,
+      key: getApiKey(),
       part: "snippet",
       type: "video",
     });
 
-    fetch(`${BASE_URL}/search?${params}`)
+    fetch(`${getBaseUrl()}/search?${params}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data.items);
