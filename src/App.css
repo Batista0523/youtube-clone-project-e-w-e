@@ -1,4 +1,8 @@
 .app_page {
   display: flex;
-  
+
+}
+
+.video_header  {
+  flex: 0.8;
 }
