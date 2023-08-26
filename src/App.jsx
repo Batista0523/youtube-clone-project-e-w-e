@@ -35,9 +35,13 @@ function App() {
         <SideBar />
         <div>
           <h1 className="video_header">Recommend Video</h1>
-          {videos.map((video) => (
-            <RecommendVideo key={video.id.videoId} video={video} />
-          ))}
+          {videos.length > 0 ? (
+            videos.map((video) => (
+              <RecommendVideo key={video.id.videoId} video={video} />
+            ))
+          ) : (
+            <p>No videos available</p>
+          )}
         </div>
       </div>
     </div>
