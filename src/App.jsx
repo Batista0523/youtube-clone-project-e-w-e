@@ -29,12 +29,12 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div>
       <NavBar setVideos={setVideos} />
       <div className="app_page">
-        <SideBar />
-        <div>
-          <h1 className="video_header">Recommend Video</h1>
+        <SideBar className="side" />
+        <div className="recommend">
+          <h1>Recommend Video</h1>
           {videos.length > 0 ? (
             videos.map((video) => (
               <RecommendVideo key={video.id.videoId} video={video} />
