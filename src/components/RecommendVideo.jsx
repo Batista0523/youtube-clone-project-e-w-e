@@ -4,10 +4,12 @@ import VideoCard from "./VideoCard";
 
 const RecommendVideo = ({ video }) => {
   return (
-
-    <div>
-        <VideoCard video={video}/>
-
+    <div className="video_preview">
+        <p>{video.snippet.title}</p>
+      <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
+        <p>{video.snippet.description}</p>
+        <p>{video.snippet.publishTime}</p>
+        
     </div>
   );
 };
