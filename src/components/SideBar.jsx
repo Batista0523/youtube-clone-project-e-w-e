@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SidebarRow from './SidebarRow.jsx';
 import "./sidebar.css"; 
 
@@ -16,7 +17,7 @@ const SideBar = () => {
             <SidebarRow title="Liked videos" Icon={<i className="material-icons">thumb_up_alt_outlined</i>} />
             <SidebarRow title="Show more" Icon={<i className="material-icons">expand_more_outlined</i>} />
             <hr />
-        </div>
+      </div>
     );
 }
 
