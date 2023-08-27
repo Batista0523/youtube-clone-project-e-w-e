@@ -1,6 +1,10 @@
 .navbar{
    text-align: center;
-   padding: 10px;
-   
+  justify-content: center;
+   flex: 100%;
+   margin: 10px;
 }
    
+.header_logo {
+    margin: 0 10px;
+}
