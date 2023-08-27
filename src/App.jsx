@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getBaseUrl } from "./api/fetch";
 import { getApiKey } from "./api/API";
+import data from "./data/data"
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -20,23 +21,25 @@ function App() {
     fetch(`${getBaseUrl()}/search?${params}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.items);
+        // console.log(data.items);
         setVideos(data.items);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
+  
 
   return (
     <div>
+      
       <NavBar setVideos={setVideos} />
       <div className="app_page">
         <SideBar className="side" />
         <div className="recommend">
           <h1>Recommend Video</h1>
-          {videos.length > 0 ? (
-            videos.map((video) => (
+          {data.length > 0 ? (
+            data.map((video) => (
               <RecommendVideo key={video.id.videoId} video={video} />
             ))
           ) : (

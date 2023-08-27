@@ -4,8 +4,4 @@ export function getBaseUrl() {
   return BASE_URL;
 }
 
-async function fetchData() {
-    const responde = await fetch(URL);
-    const data = await responde.json();
-    console.log(responde)
-}
+
