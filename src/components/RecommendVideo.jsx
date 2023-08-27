@@ -1,10 +1,18 @@
 import React from "react";
 import "./Recommend.css";
+import VideoCard from "./VideoCard";
 
 const RecommendVideo = ({ video }) => {
   return (
-    <div className="video_preview">
-      <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
+    <div>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
+        <VideoCard video={video}/>
     </div>
   );
 };
