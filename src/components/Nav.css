@@ -3,6 +3,8 @@
   justify-content: center;
    flex: 100%;
    margin: 10px;
+   display: flex;
+   justify-content: space-between;
 }
    
 .header_logo {
