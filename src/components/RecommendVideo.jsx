@@ -1,15 +1,15 @@
 import React from "react";
 import "./Recommend.css";
-import VideoCard from "./VideoCard";
+
 
 const RecommendVideo = ({ video }) => {
   return (
     <div className="video_preview">
-        <p>{video.snippet.title}</p>
+        <p className="video-title">{video.snippet.title}</p>
       <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
-        <p>{video.snippet.description}</p>
-        <p>{video.snippet.publishTime}</p>
-        <p>{video.snippet.channelTitle}</p>
+        <p className="video-description">{video.snippet.description}</p>
+        <p className="video-publishTime">{video.snippet.publishTime}</p>
+        <p className="channelTitle">{video.snippet.channelTitle}</p>
 
     </div>
   );
