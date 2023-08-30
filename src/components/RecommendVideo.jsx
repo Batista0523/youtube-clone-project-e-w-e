@@ -1,6 +1,6 @@
 import React from "react";
 import "./Recommend.css";
-import VideoCard from "./VideoCard";
+
 
 const RecommendVideo = ({ video }) => {
   return (
@@ -9,7 +9,8 @@ const RecommendVideo = ({ video }) => {
       <img src={video.snippet.thumbnails.default.url} alt="Thumbnail" />
         <p>{video.snippet.description}</p>
         <p>{video.snippet.publishTime}</p>
-        
+        <p>{video.snippet.channelTitle}</p>
+
     </div>
   );
 };
