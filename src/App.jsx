@@ -6,6 +6,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
+import ShowMore from "./components/ShowMore";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -30,6 +31,10 @@ function App() {
 
   return (
     <div>
+<<<<<<< HEAD
+=======
+   <ShowMore/>   
+>>>>>>> c2f28f6ae6f0f1226e080f3064f6d5e45a916212
       <NavBar setVideos={setVideos} />
       <div className="app_page">
 
