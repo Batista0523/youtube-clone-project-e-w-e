@@ -22,7 +22,7 @@ function App() {
     fetch(`${getBaseUrl()}/search?${params}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.items);
+       
         setVideos(data.items);
       })
       .catch((error) => {
