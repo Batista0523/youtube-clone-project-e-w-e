@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getBaseUrl } from "./api/fetch";
 import { getApiKey } from "./api/API";
+import videoData from "./data/data";
 
 
 import "./App.css";
@@ -30,20 +31,21 @@ function App() {
       });
   }, []);
 
-  console.log(videos)
+  console.log(videoData)
 
   return (
     <div>
-   <ShowMore selectedVideo={videos.items.id.videoId}/>   
+   <ShowMore selectedVideo={videoData}/>   
       <NavBar setVideos={setVideos} />
       <div className="app_page">
 
         <SideBar className="side" />
         <div className="recommend">
           <h1>Recommend Video</h1>
-          {videos.length > 0 ? (
-            videos.map((video) => (
+          {videoData.length > 0 ? (
+            videoData.map((video) => (
               <RecommendVideo key={video.id.videoId} video={video} />
+              
             ))
           ) : (
             <p>No videos available</p>
