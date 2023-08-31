@@ -169,9 +169,6 @@ const videoData = [
             title: "16 Little-Known Facts That Will Save You One Day"
         }
     },
-    
 ];
 
 export default videoData;
-
-

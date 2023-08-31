@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getBaseUrl } from "./api/fetch";
 import { getApiKey } from "./api/API";
-import data from "./data/data"
+import videoData from "./data/data";
+
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -29,23 +30,27 @@ function App() {
         console.error("Error fetching data:", error);
       });
   }, []);
-  
+
+  console.log(videoData)
 
   return (
     <div>
-   <ShowMore/>   
+   <ShowMore selectedVideo={videoData}/>   
       <NavBar setVideos={setVideos} />
       <div className="app_page">
+
         <SideBar className="side" />
         <div className="recommend">
           <h1>Recommend Video</h1>
-          {data.length > 0 ? (
-            data.map((video) => (
+          {videoData.length > 0 ? (
+            videoData.map((video) => (
               <RecommendVideo key={video.id.videoId} video={video} />
+              
             ))
           ) : (
             <p>No videos available</p>
           )}
+
         </div>
       </div>
     </div>
