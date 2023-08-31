@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getBaseUrl } from "./api/fetch";
 import { getApiKey } from "./api/API";
 
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
@@ -29,12 +30,11 @@ function App() {
       });
   }, []);
 
+  console.log(videos)
+
   return (
     <div>
-<<<<<<< HEAD
-=======
-   <ShowMore/>   
->>>>>>> c2f28f6ae6f0f1226e080f3064f6d5e45a916212
+   <ShowMore selectedVideo={videos.items.id.videoId}/>   
       <NavBar setVideos={setVideos} />
       <div className="app_page">
 

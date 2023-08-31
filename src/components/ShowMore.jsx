@@ -9,7 +9,7 @@ const ShowMore = ({ selectedVideo }) => {
             <iframe
                 width="560"
                 height="315"
-                src={`https://www.youtube.com/embed/${selectedVideo.id.videoId}`}
+                src={`https://www.youtube.com/embed/${selectedVideo.items.id.videoId}`}
                 title="YouTube Video Player"
                 frameBorder="0"
                 allowFullScreen
