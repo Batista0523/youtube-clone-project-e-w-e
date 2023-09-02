@@ -4,7 +4,7 @@ import RecommendVideo from './RecommendVideo';
 
 const ShowMore = ({ selectedVideo }) => {
     selectedVideo.map((video)=>{
-        console.log(video)
+        
 
         return (
             <div>

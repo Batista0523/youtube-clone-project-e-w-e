@@ -1,56 +1,48 @@
 import React, { useState, useEffect } from "react";
-import { getBaseUrl } from "./api/fetch";
-import { getApiKey } from "./api/API";
-import videoData from "./data/data";
-
-
-import "./App.css";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
 import ShowMore from "./components/ShowMore";
+import { getApiKey } from "./api/API";
 
 function App() {
-  const [videos, setVideos] = useState([]);
+  const [recommendedVideos, setRecommendedVideos] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("coding"); // Initial search query
 
   useEffect(() => {
-    const params = new URLSearchParams({
-      key: getApiKey(),
-      part: "snippet",
-      type: "video",
-    });
+    // Your YouTube API key
+    const apiKey = getApiKey();
 
-    fetch(`${getBaseUrl()}/search?${params}`)
+    // Fetch video data
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${searchQuery}&maxResults=8`
+    )
       .then((response) => response.json())
       .then((data) => {
-       
-        setVideos(data.items);
+        if (data.items) {
+          setRecommendedVideos(data.items);
+        }
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
-
-  console.log(videoData)
+  }, [searchQuery]);
 
   return (
     <div>
-   <ShowMore selectedVideo={videoData}/>   
-      <NavBar setVideos={setVideos} />
+      <ShowMore selectedVideo={recommendedVideos} />
+      <NavBar setSearchQuery={setSearchQuery} initialSearchQuery={searchQuery} />
       <div className="app_page">
-
         <SideBar className="side" />
         <div className="recommend">
           <h1>Recommend Video</h1>
-          {videoData.length > 0 ? (
-            videoData.map((video) => (
+          {recommendedVideos.length > 0 ? (
+            recommendedVideos.map((video) => (
               <RecommendVideo key={video.id.videoId} video={video} />
-              
             ))
           ) : (
             <p>No videos available</p>
           )}
-
         </div>
       </div>
     </div>
