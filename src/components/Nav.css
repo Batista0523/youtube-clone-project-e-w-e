@@ -10,5 +10,41 @@
 .header_logo {
     margin: 0 10px;
 }
-
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  #searchInput {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .material-icons {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    height: 30px;
+    margin-left: auto;
+  }
+  
+ 
+  
 

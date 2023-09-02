@@ -7,7 +7,7 @@ const ShowMore = ({ selectedVideo }) => {
         
 
         return (
-            <div>
+            <div className='showmore'>
                 <NavBar />
                 <iframe
                     width="560"
