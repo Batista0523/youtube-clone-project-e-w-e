@@ -7,13 +7,11 @@ import { getApiKey } from "./api/API";
 
 function App() {
   const [recommendedVideos, setRecommendedVideos] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("coding"); // Initial search query
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    // Your YouTube API key
     const apiKey = getApiKey();
 
-    // Fetch video data
     fetch(
       `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${searchQuery}&maxResults=8`
     )
@@ -31,7 +29,10 @@ function App() {
   return (
     <div>
       <ShowMore selectedVideo={recommendedVideos} />
-      <NavBar setSearchQuery={setSearchQuery} initialSearchQuery={searchQuery} />
+      <NavBar
+        setSearchQuery={setSearchQuery}
+        initialSearchQuery={searchQuery}
+      />
       <div className="app_page">
         <SideBar className="side" />
         <div className="recommend">
