@@ -5,6 +5,9 @@
    margin: 10px;
    display: flex;
    justify-content: space-between;
+   z-index: 100;
+    top: 0;
+    position: sticky;
    
 }
    
