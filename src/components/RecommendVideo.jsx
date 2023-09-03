@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./Recommend.css"
 const RecommendVideo = ({ video }) => {
   return (
-    <div>
+    <div className="recommend2">
       <div className="video_preview">
           <p className="video-title">{video.snippet.title}</p>
       

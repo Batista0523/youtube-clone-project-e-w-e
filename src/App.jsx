@@ -4,6 +4,7 @@ import SideBar from "./components/SideBar";
 import RecommendVideo from "./components/RecommendVideo";
 import ShowMore from "./components/ShowMore";
 import { getApiKey } from "./api/API";
+import "./App.css"
 
 function App() {
   const [recommendedVideos, setRecommendedVideos] = useState([]);
@@ -27,13 +28,12 @@ function App() {
   }, [searchQuery]);
 
   return (
-    <div>
-      <ShowMore selectedVideo={recommendedVideos} />
+    <div className="body">
       <NavBar
         setSearchQuery={setSearchQuery}
         initialSearchQuery={searchQuery}
       />
-      <div className="app_page">
+      <div className="app_page" >
         <SideBar className="side" />
         <div className="recommend">
           <h1>Recommend Video</h1>
