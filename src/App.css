@@ -20,9 +20,24 @@
 }
 
 .recommend {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Create a 4x4 grid inside the "recommend" div */
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  padding: 16px; /* Add padding for spacing */
+  background-color: #f9f9f9; /* Add background color */
 }
 
+.videos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr)
+  
+}
+
+.recommend2 {
+  border: 1px solid #ccc; /* Add a border around each video */
+  padding: 16px; /* Add padding to each video */
+  background-color: #fff; /* Set a background color for each video */
+  border-radius: 8px; /* Add rounded corners to the videos */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 

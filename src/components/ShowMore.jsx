@@ -1,26 +1,31 @@
-import React from 'react';
-import NavBar from './NavBar';
-import RecommendVideo from './RecommendVideo';
+import React from "react";
+import { useParams } from "react-router-dom";
 
-const ShowMore = ({ selectedVideo }) => {
-    selectedVideo.map((video)=>{
-        
+const ShowMore = ({ recommendedVideos }) => {
+  // Initialize videoId with a default value
+  const { videoId = "" } = useParams();
 
-        return (
-            <div className='showmore'>
-                <NavBar />
-                <iframe
-                    width="560"
-                    height="315"
-                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                    title="YouTube Video Player"
-                    frameBorder="0"
-                    allowFullScreen
-                ></iframe>
-                <RecommendVideo video={selectedVideo} />
-            </div>
-        );
-    })
-}
+  // Find the selected video in the recommendedVideos array
+  const selectedVideo = recommendedVideos.find(
+    (video) => video.id.videoId === videoId
+  );
+
+  // Render video details
+  return (
+    <div>
+      {selectedVideo ? (
+        <div>
+          <h2>{selectedVideo.snippet.title}</h2>
+          <p>{selectedVideo.snippet.description}</p>
+          <p>{selectedVideo.snippet.publishTime}</p>
+          <p>{selectedVideo.snippet.channelTitle}</p>
+          {/* Add more details as needed */}
+        </div>
+      ) : (
+        <p>Video not found</p>
+      )}
+    </div>
+  );
+};
 
 export default ShowMore;
