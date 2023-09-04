@@ -1,4 +1,4 @@
-// App.jsx
+import VideoShow from "./components/VideoShow";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/video/:videoId" component={VideoShow} />
         </Routes>
       </div>
     </Router>
