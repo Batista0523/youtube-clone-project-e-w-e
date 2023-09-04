@@ -1,12 +1,13 @@
-// Home.jsx
+
 import React, { useState, useEffect } from "react";
 import RecommendVideo from "./RecommendVideo";
 import { getApiKey } from "../api/API";
+import data from "../data/data"
 
 const Home = () => {
   const [recommendedVideos, setRecommendedVideos] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-
+ console.log(data)
   useEffect(() => {
     const apiKey = getApiKey();
 
