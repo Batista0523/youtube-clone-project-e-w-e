@@ -1,9 +1,8 @@
 import React from 'react';
-
 import SidebarRow from './SidebarRow.jsx';
-import "./sidebar.css"; 
+import "./Sidebar.css"; 
 
-const SideBar = () => {
+const Sidebar = () => {
     return (
         <div className="sideBar"> 
             <SidebarRow title="Home" Icon={<i className="material-icons">home</i>} />
@@ -17,8 +16,8 @@ const SideBar = () => {
             <SidebarRow title="Liked videos" Icon={<i className="material-icons">thumb_up_alt_outlined</i>} />
             <SidebarRow title="Show more" Icon={<i className="material-icons">expand_more_outlined</i>} />
             <hr />
-      </div>
+        </div>
     );
 }
 
-export default SideBar;
+export default Sidebar;
