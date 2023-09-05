@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link
 import { getApiKey } from "../api/API";
+import "./Home.css"
 
 const Home = () => {
   const [recommendedVideos, setRecommendedVideos] = useState([]);
@@ -52,13 +53,13 @@ const Home = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="results">
           {recommendedVideos.length > 0 ? (
             recommendedVideos.map((video) => (
               <div key={video.id.videoId}>
-                <h2>{video.snippet.title}</h2>
+                <h2 className="title">{video.snippet.title}</h2>
                 <Link to={`/video/${video.id.videoId}`}>
-                  <img
+                  <img className="img"
                     src={video.snippet.thumbnails.default.url}
                     alt={video.snippet.title}
                   />
