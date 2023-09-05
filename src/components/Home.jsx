@@ -18,6 +18,7 @@ const Home = () => {
     if (searchTerm.trim() === "") {
       setRecommendedVideos([]);
       return;
+      
     }
 
     const apiKey = getApiKey();
