@@ -18,7 +18,7 @@ const Home = () => {
     if (searchTerm.trim() === "") {
       setRecommendedVideos([]);
       return;
-      
+
     }
 
     const apiKey = getApiKey();
@@ -49,8 +49,9 @@ const Home = () => {
         placeholder="Search for videos"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+        className="search-bar"
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className="btn">Search</button>
       {loading ? (
         <p>Loading...</p>
       ) : (
