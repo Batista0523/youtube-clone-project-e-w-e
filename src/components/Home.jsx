@@ -69,7 +69,7 @@ const Home = () => {
               </div>
             ))
           ) : (
-            <p>No Search Result Yet! Please submit a search above!</p>
+            <p className="non-search">No Search Result Yet! Please submit a search above!</p>
           )}
         </div>
       )}
