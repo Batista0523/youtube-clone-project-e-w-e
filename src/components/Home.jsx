@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link
 import { getApiKey } from "../api/API";
-import "./Home.css"
+import "./Home.css";
 
 const Home = () => {
   const [recommendedVideos, setRecommendedVideos] = useState([]);
@@ -18,7 +18,6 @@ const Home = () => {
     if (searchTerm.trim() === "") {
       setRecommendedVideos([]);
       return;
-
     }
 
     const apiKey = getApiKey();
@@ -51,7 +50,9 @@ const Home = () => {
         onChange={(e) => setSearchQuery(e.target.value)}
         className="search-bar"
       />
-      <button onClick={handleSearch} className="btn">Search</button>
+      <button onClick={handleSearch} className="btn">
+        Search
+      </button>
       {loading ? (
         <p>Loading...</p>
       ) : (
@@ -61,7 +62,8 @@ const Home = () => {
               <div key={video.id.videoId}>
                 <h2 className="title">{video.snippet.title}</h2>
                 <Link to={`/video/${video.id.videoId}`}>
-                  <img className="img"
+                  <img
+                    className="img"
                     src={video.snippet.thumbnails.default.url}
                     alt={video.snippet.title}
                   />
@@ -69,7 +71,9 @@ const Home = () => {
               </div>
             ))
           ) : (
-            <p className="non-search">No Search Result Yet! Please submit a search above!</p>
+            <p className="non-search">
+              No Search Result Yet! Please submit a search above!
+            </p>
           )}
         </div>
       )}

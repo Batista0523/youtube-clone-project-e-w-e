@@ -36,7 +36,10 @@ const About = () => {
       <div className="marte">
         <p>{creatorData[2].name}</p>
         <p>{creatorData[2].email}</p>
-        <a href="https://github.com/winder809" target="_blank"> Winder's Github</a>
+        <a href="https://github.com/winder809" target="_blank">
+          {" "}
+          Winder's Github
+        </a>
       </div>
     </div>
   );

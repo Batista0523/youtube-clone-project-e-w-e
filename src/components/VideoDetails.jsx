@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import "./videoDetails.css"
+import "./videoDetails.css";
 
 const VideoDetails = () => {
   const { videoId } = useParams();
