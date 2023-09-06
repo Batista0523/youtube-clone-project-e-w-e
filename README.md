@@ -1,8 +1,31 @@
-# This is a youtube clone project
+# YouTube Clone
+This is a simple YouTube clone web application built using React. It allows users to search for videos, view video details, and leave comments on videos.
 
-## In this project we made a basic clone of youtube.com using a youtube API
+# Features
+Search for Videos: Enter a search query in the search bar and click the "Search" button to retrieve a list of relevant videos.
 
-### How to use the app
-- Type a random string into the search form and click the search button in order to be able to find videos
-- Click on a video image in order to navigate to a page were the user can watch the video he/she clicked on as well as leave a comment on the video.
+View Video Details: Click on a video thumbnail to view the video's details, including the video player.
 
+Leave Comments: You can leave comments on the video by entering your name and comment text in the comment section.
+
+About Page: Visit the "About" page to learn more about the creators of this YouTube clone.
+
+# Project Structure
+The project is organized as follows:
+
+src/components: Contains React components for different parts of the application, including the home page, video details page, navbar, and about page.
+
+src/api/API.js: Contains the API key configuration for making requests to the YouTube Data API.
+
+src/App.js: The main application component that sets up routing and layout.
+
+# Contributors
+Elisaul Batista
+Erick Tolentino
+Winder Marte
+
+# Technologies Used
+React
+React Router
+YouTube Data API
+HTML/CSS

@@ -5,17 +5,16 @@ const About = () => {
   const creatorData = [
     {
       name: "Elisaul Batista",
-      email: "elisaulbatista@pursuit.org",
-      
+      email: "Elisaulbatista@pursuit.org",
     },
     {
       name: "Erick Tolentino",
       email: "Ericktolentino@pursuit.org",
     },
     {
-      name:"Winder Marte",
-      email3: "winderjoelmarte@pursuit.org",
-    }
+      name: "Winder Marte",
+      email: "Winderjoelmarte@pursuit.org",
+    },
   ];
   return (
     <div className="card">
@@ -35,8 +34,9 @@ const About = () => {
         </a>
       </div>
       <div className="marte">
-        <p>Winder Marte:</p>
-        <a href=""></a>
+        <p>{creatorData[2].name}</p>
+        <p>{creatorData[2].email}</p>
+        <a href="https://github.com/winder809" target="_blank"> Winder's Github</a>
       </div>
     </div>
   );
