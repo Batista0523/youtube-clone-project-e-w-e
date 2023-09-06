@@ -1,41 +1,40 @@
-
 .search-bar {
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding: 8px 12px;
-    width: 50%;
-    font-size: 16px;
-   
-  }
-  
-  .btn {
-    background-color: #ff0000;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #e0e0e0;
-  }
-  
-   .results {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 16px;
-    margin: 10px;
-  }
-   
-  .results .title {
-    font-size: 18px;
-    margin: 8px 0;
-    color: #333;
-    font-weight: 100;
-  }
-  
-  .results .img {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 8px 12px;
+  width: 50%;
+  font-size: 16px;
+
+}
+
+.btn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  margin: 10px;
+}
+
+.results .title {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+  font-weight: 100;
+}
+
+.results .img {
   max-width: 100%;
   height: auto;
   border: 1px solid #ccc;
@@ -43,36 +42,36 @@
   transition: transform 0.2s ease;
 }
 
-  .results .img:hover {
-    transform: scale(1.05);
-  }
-  
+.results .img:hover {
+  transform: scale(1.05);
+}
 
-  .results .img-link {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .results .img-link:hover {
-    text-decoration: underline;
+
+.results .img-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.results .img-link:hover {
+  text-decoration: underline;
+}
+
+.non-search {
+  background-color: rgba(128, 128, 128, 0.465);
+  margin: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .search-bar {
+    width: 50%;
   }
 
-  .non-search {
-    background-color: rgba(128, 128, 128, 0.465);
-    margin: 10px;
-    padding: 10px;
+  .results {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 768px) {
-    .search-bar {
-      width: 50%; 
-    }
-  
-    .results {
-      grid-template-columns: repeat(3, 1fr); 
-    }
-  
-    .results .img {
-      height: 250px; 
-    }
+  .results .img {
+    height: 250px;
   }
+}
